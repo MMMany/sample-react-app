@@ -6,13 +6,13 @@ import HdmiTestResults from "../pages/HdmiTestResults";
 import { NotFound } from "../pages/Errors";
 import App from "../App";
 
-export const Version = "v1";
+const UriVersion = "v1";
 
 export const Uri = {
-  home: `/${Version}/home`,
-  agentList: `/${Version}/agent/list`,
-  hdmiTestRequest: `/${Version}/hdmitest/request`,
-  hdmiTestResults: `/${Version}/hdmitest/results`,
+  home: `/${UriVersion}/home`,
+  agentList: `/${UriVersion}/agent/list`,
+  hdmiTestRequest: `/${UriVersion}/hdmitest/request`,
+  hdmiTestResults: `/${UriVersion}/hdmitest/results`,
   notFound: `/notfound`,
 };
 
@@ -21,7 +21,7 @@ export default function MainRouter() {
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Navigate to={Uri.home} replace />} />
-        <Route path="v1">
+        <Route path={UriVersion}>
           <Route path="home" element={<HomePage />} />
           <Route path="agent">
             <Route path="list" element={<TestAgentList />} />

@@ -1,13 +1,18 @@
 import React from "react";
 import { Box, Avatar, Button, Divider } from "@mui/material";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 
 export default function CustomAppBar() {
-  const CustomButton = styled(Button)({
-    // color: "white",
-    // backgroundColor: theme.palette.primary.main,
-    margin: "1ch",
-  });
+  const CustomButton = styled(Button)(({ theme }) =>
+    theme.unstable_sx({
+      // m: "1ch",
+      mx: '8px',
+    })
+  );
+
+  const handleClicked = React.useCallback(() => {
+    console.debug("Clicked!");
+  }, []);
 
   return (
     <Box
@@ -30,11 +35,11 @@ export default function CustomAppBar() {
         }}
       >
         <Avatar />
-        <CustomButton>Logout</CustomButton>
+        <CustomButton onClick={handleClicked}>Logout</CustomButton>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <CustomButton>Settings</CustomButton>
+        <CustomButton onClick={handleClicked}>Settings</CustomButton>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <CustomButton>Support</CustomButton>
+        <CustomButton onClick={handleClicked}>Support</CustomButton>
       </Box>
     </Box>
   );

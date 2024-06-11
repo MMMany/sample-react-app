@@ -101,5 +101,10 @@ export const createCustomTheme = (isDarkMode) => {
       mode: isDarkMode ? "dark" : "light",
       ...(isDarkMode ? MaterialColorV3.dark : MaterialColorV3.light),
     },
+    // components: {
+    //   MuiButton: {
+
+    //   }
+    // }
   });
 };

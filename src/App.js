@@ -3,17 +3,20 @@ import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import SideMenu from "./components/SideMenu";
 import CustomAppBar from "./components/CustomAppBar";
-import AppLogoImage from "./assets/SEED-Logo.png";
 
 function App() {
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         display: "flex",
         flexDirection: "row",
         width: 1,
+        border: 1,
+        borderColor: "red",
         height: 1,
-      }}
+        mx: "auto",
+        maxWidth: theme.breakpoints.values.lg,
+      })}
     >
       {/* Left Elements */}
       <Box
@@ -34,7 +37,7 @@ function App() {
             bgcolor: "primary.light",
             height: "5rem",
           }}
-          src={AppLogoImage}
+          src={"/images/SEED-Logo.png"}
           alt=""
         />
         <SideMenu />

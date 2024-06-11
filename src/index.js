@@ -4,9 +4,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import CssBaseline from "@mui/material/CssBaseline";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "@mui/material";
 import { createCustomTheme } from "./utils/style";
-import { createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import MainRouter from "./routers/MainRouter";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
