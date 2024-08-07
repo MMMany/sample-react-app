@@ -4,7 +4,7 @@ import { Home as HomeIcon, Devices as DevicesIcon, SettingsInputHdmi as HdmiIcon
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
-import { Uri } from "../routers/MainRouter";
+import { Uri } from "../routes/MainRoutes";
 
 export default function SideMenu() {
   const menuItems = React.useRef([
